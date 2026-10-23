@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Godot &amp; Blender notes</title>
+  </head>
+  <body class="bg-white text-slate-800" x-data="docs">
+    <div class="flex min-h-screen">
+      <aside
+        class="fixed inset-y-0 left-0 z-10 w-64 -translate-x-full overflow-y-auto border-r border-slate-200 bg-slate-50 p-4 transition-transform md:translate-x-0"
+        :class="{ 'translate-x-0': menuOpen }"
+      >
+        <a href="#/" class="mb-4 block text-lg font-bold hover:underline" @click="menuOpen = false">Godot &amp; Blender</a>
+        <template x-for="cat in menu" :key="cat.label">
+          <div class="mb-3">
+            <button
+              class="flex w-full items-center justify-between text-left text-xs font-semibold uppercase tracking-wide text-slate-500"
+              @click="toggle(cat.label)"
+            >
+              <span x-text="cat.label"></span>
+              <span x-text="openCats.includes(cat.label) ? '−' : '+'"></span>
+            </button>
+            <ul class="mt-1" x-show="openCats.includes(cat.label)">
+              <template x-for="(item, i) in cat.items" :key="i">
+                <li>
+                  <template x-if="item.separator !== undefined">
+                    <div class="mb-1 mt-3 border-t border-slate-200 px-2 pt-2 text-[11px] uppercase text-slate-400" x-text="item.separator"></div>
+                  </template>
+                  <template x-if="item.page">
+                    <a
+                      :href="'#/' + item.page"
+                      class="block rounded px-2 py-1 text-sm hover:bg-slate-200"
+                      :class="{ 'bg-slate-200 font-semibold': item.page === current }"
+                      @click="menuOpen = false"
+                      x-text="item.label"
+                    ></a>
+                  </template>
+                </li>
+              </template>
+            </ul>
+          </div>
+        </template>
+      </aside>
+
+      <main class="flex-1 md:ml-64">
+        <button class="m-3 rounded border px-2 py-1 text-sm md:hidden" @click="menuOpen = !menuOpen">Menu</button>
+        <article class="md-content mx-auto max-w-3xl px-6 py-8">
+          <p x-show="cat" class="text-xs font-semibold uppercase tracking-wide text-slate-500" x-text="cat"></p>
+          <div x-html="html"></div>
+        </article>
+      </main>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

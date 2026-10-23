@@ -1,0 +1,19 @@
+{
+  "categories": [
+    {
+      "label": "Godot",
+      "items": [
+        { "separator": "Basics" },
+        { "label": "Signals", "page": "godot/signals" }
+      ]
+    },
+    {
+      "label": "Blender",
+      "items": []
+    },
+    {
+      "label": "Pipeline",
+      "items": []
+    }
+  ]
+}
