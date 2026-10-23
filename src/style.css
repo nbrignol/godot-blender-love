@@ -16,3 +16,5 @@
   & table { @apply my-4 w-full text-sm; }
   & th, & td { @apply border border-slate-200 px-2 py-1 text-left; }
 }
+
+[x-cloak] { display: none !important; }
