@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Godot &amp; Blender notes</title>
+    <title>Godot + Blender = ❤️</title>
   </head>
   <body class="bg-white text-slate-800" x-data="docs">
     <div class="flex min-h-screen">
@@ -12,7 +12,7 @@
         :class="{ 'translate-x-0': menuOpen }"
       >
         <div class="mb-4 flex items-center justify-between">
-          <a href="#/" class="text-lg font-bold hover:underline" @click="menuOpen = false">Godot &amp; Blender</a>
+          <a href="#/" class="text-lg font-bold hover:underline" @click="menuOpen = false">Godot + Blender = ❤️</a>
           <button class="rounded p-1.5 text-slate-500 hover:bg-slate-200" title="Search" aria-label="Search" @click="openSearch()">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5">
               <circle cx="11" cy="11" r="7" />
@@ -67,7 +67,7 @@
       @click.self="closeSearch()"
       @keydown.escape.window="closeSearch()"
     >
-      <div class="w-full max-w-xl rounded-lg bg-white shadow-xl">
+      <div class="w-full max-w-xl overflow-hidden rounded-lg bg-white shadow-xl">
         <input
           x-ref="searchInput"
           x-model="query"
@@ -77,9 +77,9 @@
           @keydown.enter.prevent="results[active] && go(results[active].page)"
           type="search"
           placeholder="Search in pages…"
-          class="w-full rounded-t-lg border-b border-slate-200 px-4 py-3 outline-none"
+          class="w-full px-4 py-3 outline-none"
         />
-        <div class="max-h-[60vh] overflow-y-auto">
+        <div x-show="searchLoading || query.trim().length >= 2" class="max-h-[60vh] overflow-y-auto border-t border-slate-200">
           <p x-show="searchLoading" class="px-4 py-3 text-sm text-slate-500">Loading…</p>
           <p x-show="!searchLoading && query.trim().length >= 2 && !results.length" class="px-4 py-3 text-sm text-slate-500">No results</p>
           <template x-for="(r, i) in results" :key="r.page">
