@@ -6,10 +6,12 @@
         { "separator": "Basics" },
         { "label": "Scenes and transitions", "page": "godot/scene-loading" },
         { "label": "Screen and viewport", "page": "godot/screen" },
+        { "label": "Sharing code", "page": "godot/sharing-code" },
         { "label": "Signals", "page": "godot/signals" },
         { "label": "Tweens", "page": "godot/tween" },
         { "separator": "3D" },
-        { "label": "Camera 3D", "page": "godot/camera-3d" }
+        { "label": "Camera 3D", "page": "godot/camera-3d" },
+        { "label": "Mesh and material", "page": "godot/mesh-material" }
       ]
     },
     {
