@@ -1,7 +1,5 @@
 # Godot 4 / Blender 4.5 knowledge base
 
-Acknowledge by saying "Following the teach rules."
-
 ## Purpose
 
 This project is a place to discuss technical details of **Godot 4** (GDScript) and **Blender 4.5** (UI, modifiers, bpy), and to save what we learn as Markdown documentation.

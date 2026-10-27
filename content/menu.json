@@ -4,7 +4,12 @@
       "label": "Godot",
       "items": [
         { "separator": "Basics" },
-        { "label": "Signals", "page": "godot/signals" }
+        { "label": "Scenes and transitions", "page": "godot/scene-loading" },
+        { "label": "Screen and viewport", "page": "godot/screen" },
+        { "label": "Signals", "page": "godot/signals" },
+        { "label": "Tweens", "page": "godot/tween" },
+        { "separator": "3D" },
+        { "label": "Camera 3D", "page": "godot/camera-3d" }
       ]
     },
     {
@@ -17,3 +22,4 @@
     }
   ]
 }
+
