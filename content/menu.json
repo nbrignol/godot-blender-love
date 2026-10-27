@@ -8,6 +8,7 @@
         { "label": "Screen and viewport", "page": "godot/screen" },
         { "label": "Sharing code", "page": "godot/sharing-code" },
         { "label": "Signals", "page": "godot/signals" },
+        { "label": "SubViewport", "page": "godot/subviewport" },
         { "label": "Tweens", "page": "godot/tween" },
         { "separator": "3D" },
         { "label": "Camera 3D", "page": "godot/camera-3d" },
@@ -20,7 +21,9 @@
     },
     {
       "label": "Pipeline",
-      "items": []
+      "items": [
+        { "label": "Animation", "page": "pipeline/animation" }
+      ]
     }
   ]
 }
